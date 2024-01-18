@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List product</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Number</td>
+        <td>Name</td>
+        <td>Details</td>
+        <td>Price</td>
+    </tr>
+    <tr>
+        <td th:each = "product,stage : ${list}"></td>
+        <td th:text = "${stage.count}"></td>
+        <td th:text = "${product.name}"></td>
+        <td th:text = "${product.details}"></td>
+        <td th:text = "${product.price}"></td>
+    </tr>
+</table>
+</body>
+</html>
